@@ -1,7 +1,10 @@
 input.onButtonPressed(Button.A, function () {
-    pins.analogWritePin(AnalogPin.P13, 470)
-    pins.analogWritePin(AnalogPin.P14, 0)
-    basic.pause(200)
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    pins.digitalWritePin(DigitalPin.P7, 1)
+    pins.digitalWritePin(DigitalPin.P6, 0)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P6, 0)
+    pins.digitalWritePin(DigitalPin.P7, 0)
 })
 input.onButtonPressed(Button.B, function () {
     isB = 1
@@ -10,16 +13,16 @@ input.onButtonPressed(Button.B, function () {
     basic.pause(4800)
     pins.digitalWritePin(DigitalPin.P8, 0)
     pins.digitalWritePin(DigitalPin.P9, 0)
-    basic.pause(1000)
-    pins.digitalWritePin(DigitalPin.P0, 1)
-    pins.digitalWritePin(DigitalPin.P1, 0)
-    basic.pause(1200)
-    pins.digitalWritePin(DigitalPin.P0, 0)
-    pins.digitalWritePin(DigitalPin.P1, 1)
-    basic.pause(1120)
-    pins.digitalWritePin(DigitalPin.P0, 0)
-    pins.digitalWritePin(DigitalPin.P1, 0)
-    basic.pause(1000)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P6, 1)
+    pins.digitalWritePin(DigitalPin.P7, 0)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P6, 0)
+    pins.digitalWritePin(DigitalPin.P7, 1)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P6, 0)
+    pins.digitalWritePin(DigitalPin.P7, 0)
+    basic.pause(500)
     pins.digitalWritePin(DigitalPin.P8, 1)
     pins.digitalWritePin(DigitalPin.P9, 0)
     basic.pause(4750)
@@ -38,10 +41,8 @@ basic.forever(function () {
     } else if (pins.digitalReadPin(DigitalPin.P15) == 1) {
         pins.analogWritePin(AnalogPin.P8, 500)
         pins.analogWritePin(AnalogPin.P9, 0)
-    } else {
-        if (isB == 0) {
-            pins.analogWritePin(AnalogPin.P8, 0)
-            pins.analogWritePin(AnalogPin.P9, 0)
-        }
+    } else if (isB == 0) {
+        pins.analogWritePin(AnalogPin.P8, 0)
+        pins.analogWritePin(AnalogPin.P9, 0)
     }
 })
