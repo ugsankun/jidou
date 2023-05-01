@@ -1,4 +1,56 @@
-input.onButtonPressed(Button.A, function () {
+/**
+ * keypad
+ * 
+ * pin8
+ * 
+ * pin16
+ * 
+ * pin13
+ * 
+ * pin14
+ * 
+ * pin0
+ * 
+ * pin1
+ * 
+ * pin2
+ * 
+ * motor
+ * 
+ * pin5
+ * 
+ * pin11
+ * 
+ * pin12
+ * 
+ * pin15
+ */
+// keypad
+// 
+// pin8
+// 
+// pin0
+// 
+// pin16
+// 
+// pin13
+// 
+// pin14
+// 
+// pin1
+// 
+// pin2
+// 
+// motor
+// 
+// pin5
+// 
+// pin11
+// 
+// pin12
+// 
+// pin15
+function ame1 () {
     isB = 1
     pins.digitalWritePin(DigitalPin.P8, 0)
     pins.digitalWritePin(DigitalPin.P9, 1)
@@ -21,8 +73,8 @@ input.onButtonPressed(Button.A, function () {
     pins.digitalWritePin(DigitalPin.P8, 0)
     pins.digitalWritePin(DigitalPin.P9, 0)
     isB = 0
-})
-input.onButtonPressed(Button.B, function () {
+}
+function ame2 () {
     isB = 1
     pins.digitalWritePin(DigitalPin.P8, 0)
     pins.digitalWritePin(DigitalPin.P9, 1)
@@ -45,23 +97,9 @@ input.onButtonPressed(Button.B, function () {
     pins.digitalWritePin(DigitalPin.P8, 0)
     pins.digitalWritePin(DigitalPin.P9, 0)
     isB = 0
-})
+}
 let isB = 0
-pins.setPull(DigitalPin.P15, PinPullMode.PullDown)
-pins.setPull(DigitalPin.P16, PinPullMode.PullDown)
 isB = 0
-basic.forever(function () {
-    if (pins.digitalReadPin(DigitalPin.P16) == 1) {
-        pins.analogWritePin(AnalogPin.P8, 0)
-        pins.analogWritePin(AnalogPin.P9, 500)
-    } else if (pins.digitalReadPin(DigitalPin.P15) == 1) {
-        pins.analogWritePin(AnalogPin.P8, 500)
-        pins.analogWritePin(AnalogPin.P9, 0)
-    } else if (isB == 0) {
-        pins.analogWritePin(AnalogPin.P8, 0)
-        pins.analogWritePin(AnalogPin.P9, 0)
-    }
-})
 basic.forever(function () {
     pins.digitalWritePin(DigitalPin.P8, 0)
     pins.digitalWritePin(DigitalPin.P0, 1)
@@ -84,8 +122,10 @@ basic.forever(function () {
     pins.digitalWritePin(DigitalPin.P1, 1)
     if (pins.digitalReadPin(DigitalPin.P16) == 1) {
         basic.showNumber(1)
+        ame1()
     } else if (pins.digitalReadPin(DigitalPin.P13) == 1) {
         basic.showNumber(2)
+        ame2()
     } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
         basic.showNumber(3)
     } else {
