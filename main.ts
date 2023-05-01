@@ -62,3 +62,73 @@ basic.forever(function () {
         pins.analogWritePin(AnalogPin.P9, 0)
     }
 })
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P8, 0)
+    pins.digitalWritePin(DigitalPin.P0, 1)
+    if (pins.digitalReadPin(DigitalPin.P16) == 1) {
+        basic.showString("c")
+    } else if (pins.digitalReadPin(DigitalPin.P13) == 1) {
+        basic.showNumber(0)
+    } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
+        basic.showString(".")
+    } else {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    }
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P1, 1)
+    if (pins.digitalReadPin(DigitalPin.P16) == 1) {
+        basic.showNumber(1)
+    } else if (pins.digitalReadPin(DigitalPin.P13) == 1) {
+        basic.showNumber(2)
+    } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
+        basic.showNumber(3)
+    } else {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    }
+    pins.digitalWritePin(DigitalPin.P1, 0)
+    pins.digitalWritePin(DigitalPin.P2, 1)
+    if (pins.digitalReadPin(DigitalPin.P16) == 1) {
+        basic.showNumber(4)
+    } else if (pins.digitalReadPin(DigitalPin.P13) == 1) {
+        basic.showNumber(5)
+    } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
+        basic.showNumber(6)
+    } else {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    }
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    pins.digitalWritePin(DigitalPin.P8, 1)
+    if (pins.digitalReadPin(DigitalPin.P16) == 1) {
+        basic.showNumber(7)
+    } else if (pins.digitalReadPin(DigitalPin.P13) == 1) {
+        basic.showNumber(8)
+    } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
+        basic.showNumber(9)
+    } else {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    }
+})
