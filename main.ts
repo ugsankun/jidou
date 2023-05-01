@@ -2,7 +2,7 @@ function ame3 () {
     isB = 1
     pins.digitalWritePin(DigitalPin.P9, 0)
     pins.digitalWritePin(DigitalPin.P10, 1)
-    basic.pause(3500)
+    basic.pause(3600)
     pins.digitalWritePin(DigitalPin.P9, 0)
     pins.digitalWritePin(DigitalPin.P10, 0)
     basic.pause(500)
@@ -17,7 +17,7 @@ function ame3 () {
     basic.pause(500)
     pins.digitalWritePin(DigitalPin.P9, 1)
     pins.digitalWritePin(DigitalPin.P10, 0)
-    basic.pause(3400)
+    basic.pause(3500)
     pins.digitalWritePin(DigitalPin.P9, 0)
     pins.digitalWritePin(DigitalPin.P10, 0)
     isB = 0
@@ -128,87 +128,56 @@ function ame2 () {
 }
 let istap = 0
 let isB = 0
+led.enable(false)
 isB = 0
 let ispad = 0
-istap = 0
+istap = 1
 basic.forever(function () {
     led.enable(false)
     pins.digitalWritePin(DigitalPin.P8, 0)
     pins.digitalWritePin(DigitalPin.P0, 1)
     if (pins.digitalReadPin(DigitalPin.P16) == 1) {
         basic.showString("c")
-        pins.analogWritePin(AnalogPin.P12, 0)
-        pins.analogWritePin(AnalogPin.P15, 338)
     } else if (pins.digitalReadPin(DigitalPin.P13) == 1) {
         basic.showNumber(0)
     } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
         basic.showString(".")
-        pins.analogWritePin(AnalogPin.P12, 330)
-        pins.analogWritePin(AnalogPin.P15, 0)
     } else {
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
-        pins.digitalWritePin(DigitalPin.P12, 0)
-        pins.digitalWritePin(DigitalPin.P15, 0)
+    	
     }
     pins.digitalWritePin(DigitalPin.P0, 0)
     pins.digitalWritePin(DigitalPin.P1, 1)
     if (pins.digitalReadPin(DigitalPin.P16) == 1) {
         ispad = 1
-        basic.showNumber(1)
-        music.ringTone(262)
         ame1()
-        music.stopAllSounds()
         ispad = 0
+        basic.showNumber(1)
     } else if (pins.digitalReadPin(DigitalPin.P13) == 1) {
         ispad = 1
-        basic.showNumber(2)
-        music.ringTone(294)
         ame2()
-        music.stopAllSounds()
         ispad = 0
+        basic.showNumber(2)
     } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
         ispad = 1
-        basic.showNumber(3)
-        music.ringTone(330)
         ame3()
-        music.stopAllSounds()
         ispad = 0
+        basic.showNumber(3)
     } else {
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
+    	
     }
     pins.digitalWritePin(DigitalPin.P1, 0)
     pins.digitalWritePin(DigitalPin.P2, 1)
     if (pins.digitalReadPin(DigitalPin.P16) == 1) {
         ispad = 1
-        basic.showNumber(4)
-        music.ringTone(349)
         ame4()
-        music.stopAllSounds()
         ispad = 0
+        basic.showNumber(4)
     } else if (pins.digitalReadPin(DigitalPin.P13) == 1) {
         basic.showNumber(5)
     } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
         basic.showNumber(6)
     } else {
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
+    	
     }
     pins.digitalWritePin(DigitalPin.P2, 0)
     pins.digitalWritePin(DigitalPin.P8, 1)
@@ -219,16 +188,11 @@ basic.forever(function () {
     } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
         basic.showNumber(9)
     } else {
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
+    	
     }
 })
 basic.forever(function () {
+    led.enable(false)
     if (ispad == 0) {
         if (istap == 1) {
             if (input.buttonIsPressed(Button.A)) {
