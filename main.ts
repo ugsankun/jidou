@@ -2,7 +2,7 @@ function ame3 () {
     isB = 1
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 1)
-    basic.pause(1650)
+    basic.pause(1850)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     basic.pause(500)
@@ -17,7 +17,7 @@ function ame3 () {
     basic.pause(500)
     pins.digitalWritePin(DigitalPin.P6, 1)
     pins.digitalWritePin(DigitalPin.P7, 0)
-    basic.pause(1600)
+    basic.pause(1850)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     isB = 0
@@ -51,7 +51,7 @@ function ame1 () {
     isB = 1
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 1)
-    basic.pause(430)
+    basic.pause(500)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     basic.pause(500)
@@ -66,7 +66,7 @@ function ame1 () {
     basic.pause(500)
     pins.digitalWritePin(DigitalPin.P6, 1)
     pins.digitalWritePin(DigitalPin.P7, 0)
-    basic.pause(400)
+    basic.pause(450)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     isB = 0
@@ -82,7 +82,7 @@ function ame4 () {
     isB = 1
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 1)
-    basic.pause(2300)
+    basic.pause(2550)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     basic.pause(500)
@@ -97,7 +97,7 @@ function ame4 () {
     basic.pause(500)
     pins.digitalWritePin(DigitalPin.P6, 1)
     pins.digitalWritePin(DigitalPin.P7, 0)
-    basic.pause(2200)
+    basic.pause(2550)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     isB = 0
@@ -106,7 +106,7 @@ function ame5 () {
     isB = 1
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 1)
-    basic.pause(3400)
+    basic.pause(3750)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     basic.pause(500)
@@ -121,7 +121,7 @@ function ame5 () {
     basic.pause(500)
     pins.digitalWritePin(DigitalPin.P6, 1)
     pins.digitalWritePin(DigitalPin.P7, 0)
-    basic.pause(3270)
+    basic.pause(3750)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     isB = 0
@@ -130,7 +130,7 @@ function ame8 () {
     isB = 1
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 1)
-    basic.pause(5250)
+    basic.pause(5800)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     basic.pause(500)
@@ -145,7 +145,7 @@ function ame8 () {
     basic.pause(500)
     pins.digitalWritePin(DigitalPin.P6, 1)
     pins.digitalWritePin(DigitalPin.P7, 0)
-    basic.pause(5070)
+    basic.pause(5800)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     isB = 0
@@ -154,7 +154,7 @@ function ame7 () {
     isB = 1
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 1)
-    basic.pause(4650)
+    basic.pause(5100)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     basic.pause(500)
@@ -169,7 +169,7 @@ function ame7 () {
     basic.pause(500)
     pins.digitalWritePin(DigitalPin.P6, 1)
     pins.digitalWritePin(DigitalPin.P7, 0)
-    basic.pause(4520)
+    basic.pause(5100)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     isB = 0
@@ -178,7 +178,7 @@ function ame6 () {
     isB = 1
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 1)
-    basic.pause(4000)
+    basic.pause(4400)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     basic.pause(500)
@@ -193,7 +193,7 @@ function ame6 () {
     basic.pause(500)
     pins.digitalWritePin(DigitalPin.P6, 1)
     pins.digitalWritePin(DigitalPin.P7, 0)
-    basic.pause(3820)
+    basic.pause(4400)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     isB = 0
@@ -202,7 +202,7 @@ function ame2 () {
     isB = 1
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 1)
-    basic.pause(1000)
+    basic.pause(1150)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     basic.pause(500)
@@ -217,7 +217,7 @@ function ame2 () {
     basic.pause(500)
     pins.digitalWritePin(DigitalPin.P6, 1)
     pins.digitalWritePin(DigitalPin.P7, 0)
-    basic.pause(950)
+    basic.pause(1150)
     pins.digitalWritePin(DigitalPin.P6, 0)
     pins.digitalWritePin(DigitalPin.P7, 0)
     isB = 0
